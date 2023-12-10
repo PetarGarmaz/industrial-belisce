@@ -1,0 +1,245 @@
+/* Custom Colors */
+
+:root {
+	/* Credits to Bizo46 */
+	--wcoffee: #cbc9ba;
+
+	--dcgrey: #1e2124;
+	--ryellow: #fada5e;
+	--corange: #ff7f50;
+
+	--fntdark: #0f0f0f;
+	--fntlight: #f0f0f0;
+	--fntgrey: #808080;
+}
+
+#aboutintro {
+	display: table;
+	width: 100%;
+	padding: 0;
+	background: url(../img/industrial.jpg) no-repeat fixed center;
+	background-color: var(--wcoffee);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+
+#aboutintro .overlay {
+	background: rgba(0,0,0,0.4);
+}
+
+#aboutintro h1 {
+	font-family: 'Dancing Script', cursive;
+	color: var(--ryellow);
+	font-size: 10em;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#aboutintro span {
+	color: #a7c44c;
+	font-weight: 600;
+}
+
+#aboutintro p {
+	color: var(--fntlight);
+	font-size: 32px;
+	font-weight: 300;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+/* About Industrial */
+
+#aboutindustrial {
+	padding: 0 0 120px 0;
+}
+
+#aboutindustrial .sectiontitle {
+	background: var(--dcgrey) url(../img/rooms.png) center center no-repeat fixed;
+	background-size: cover;
+}
+
+#aboutindustrial .sectiontitle .overlay {
+	padding: 80px 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+
+#aboutindustrial .sectiontitle h2 {
+	color: var(--lightbg);
+}
+
+#aboutindustrial h3 {
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+
+#aboutindustrial hr {
+	margin: 0 auto;
+}
+
+#aboutindustrial .sectiontitle p {
+	margin: 10px;
+	color: var(--ryellow);
+}
+
+/* About Industrial - Content */
+
+main {
+	margin: 60px auto;
+	width: 80%;
+	max-width: 1200px;
+}
+
+.hicontent h1 {
+	margin: 10px;
+	border-bottom: 3px solid var(--corange);
+	color: var(--fntdark);
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+.hicontent h2 {
+	margin: 20px;
+	border-bottom: 1px solid var(--dcgrey);
+	color: var(--fntdark);
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.hicontent p {
+	color: var(--darkbg);
+	text-align: justify;
+	font-size: 20px;
+}
+
+.higroup {
+	margin: 20px 0;
+}
+
+.higroup img {
+	margin: 60px auto;
+	width: 90%;
+	max-width: 1000px;
+	display: flex;
+	align-items: center;
+}
+
+.higroup p {
+	color: var(--darkbg);
+	text-align: justify;
+	font-size: 20px;
+}
+
+.hicontentother {
+	margin: 100px auto;
+	clear: left;
+}
+
+@media (max-width: 768px) {
+	.hicontent h1 {
+		border-bottom: 3px solid var(--corange);
+		color: var(--fntdark);
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	
+	.higroup p {
+		color: var(--darkbg);
+		text-align: justify;
+		font-size: 14px;
+	}
+	
+	.hicontent p {
+		color: var(--darkbg);
+		text-align: justify;
+		font-size: 14px;
+	}
+}
+
+
+
+
+/* Popup */
+
+.popup {
+	padding: 20px;
+	position: fixed;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	background-color: var(--ryellow);
+	visibility: hidden;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.popup.active {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.popup .popupcontent {
+	text-align: center;
+	clear: right;
+}
+
+.popupcontent p {
+	color: var(--fntdark);
+	font-size: 30px;
+}
+
+.popupcontent a {
+	background-color: transparent;
+	color: var(--fntlight);
+	font-size: 15px;
+	text-transform: uppercase;
+}
+.popuproomimg .slide {
+	display: none;
+}
+
+.popuproomimg img {
+	width: 50%;
+	max-width: 100%;
+	margin: 50px 50% 50px 5%;
+	float: left;
+}
+
+@media (max-width: 768px) {
+	.popuproomimg img {
+		width: 90%;
+		max-width: 100%;
+		margin: 50px auto 50px 5%;
+		float: left;
+	}
+}
+
+.popuproomimg .popupslidebtn {
+	background-color: var(--dcgrey);
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.popuproomimg .popupslidebtn a {
+	color: var(--corange);
+	font-weight: bold;
+	text-align: center;
+	font-size: 30px;
+	background-color: transparent;	
+}
+
+.popuproomimg .popupslidebtn a:hover, .popuproomimg .popupslidebtn a:focus {
+	color: var(--ryellow);
+}
